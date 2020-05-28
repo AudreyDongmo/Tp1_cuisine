@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2E8B57"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="Philippe Club"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintVertical_bias="0.28"
+        />
+
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_videocam_black_24dp"
+        android:tag="@string/s1"
+        android:layout_margin="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintVertical_bias="0.83"
+        />
+    <ImageView
+        android:id="@+id/person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person_outline_black_24dp"
+        android:tag="@string/s1"
+        android:layout_margin="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintVertical_bias="0.83"
+        />
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:text="Camera"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nom"
+        app:layout_constraintVertical_bias="0.74"
+        android:layout_marginLeft="55dp"
+       />
+
+// pour les bords arrondis , on va definir un drawable round_outline  que l'on va mettre en bckground de notre imageView
+ // ou on mettra à jour les dimensions du rectangle qui contient notre imageView
+    <ImageView
+        android:id="@+id/call"
+        android:layout_width="110dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_call_end_black_24dp"
+        android:layout_margin="55dp"
+        android:background="@drawable/round_outline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintVertical_bias="0.86"
+        app:layout_constraintStart_toEndOf="@id/camera"
+
+        />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:textSize="18dp"
+        android:text="End"
+        android:layout_marginLeft="38dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/call"
+        app:layout_constraintLeft_toLeftOf="@id/call"
+
+        />
+
+    <ImageView
+        android:id="@+id/camera1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_videocam_black_24dp"
+        android:tag="@string/s1"
+        android:layout_margin="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintVertical_bias="0.83"
+        app:layout_constraintStart_toEndOf="@id/call"
+        />
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:text="One-way Camera"
+        android:alpha="0.5"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/camera1"
+        app:layout_constraintTop_toBottomOf="@id/camera1"
+        app:layout_constraintVertical_bias="0.73"
+        />
+
+    <ImageView
+        android:id="@+id/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_bluetooth_black_24dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintVertical_bias="0.958"
+        />
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:text="Bluetooth"
+        app:layout_constraintTop_toBottomOf="@id/blue"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.99"
+        android:layout_margin="10dp"/>
+    <ImageView
+        android:id="@+id/vol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_volume_up_black_24dp"
+        android:layout_margin="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/blue"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintVertical_bias="0.99999999"
+        />
+    <TextView
+        android:id="@+id/speake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:text="Speaker"
+        app:layout_constraintTop_toBottomOf="@id/vol"
+        app:layout_constraintLeft_toRightOf="@id/text2"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="8dp"
+        />
+    <ImageView
+        android:id="@+id/micro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_mic_off_black_24dp"
+        android:layout_margin="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vol"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintVertical_bias="0.99999999"
+        />
+    <TextView
+        android:id="@+id/mute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:text="Mute"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.5"
+        app:layout_constraintTop_toBottomOf="@id/micro"
+        app:layout_constraintLeft_toLeftOf="@id/micro"
+
+        />
+
+    <ImageView
+        android:id="@+id/keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="80dp"
+        android:src="@drawable/ic_keyboard_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@id/micro"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+    <TextView
+        android:id="@+id/key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:text="Keypad"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/keyboard"
+        app:layout_constraintLeft_toLeftOf="@id/keyboard"
+
+        />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="13dp"
+        android:text="Mobile   6 94 50 24 87"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nom"
+        app:layout_constraintVertical_bias="0"
+        android:layout_margin="30dp"/>
+
+    <TextView
+        android:id="@+id/dailing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="90dp"
+        android:textStyle="italic"
+        android:textSize="16dp"
+        android:text="Dialing"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/number"
+        android:layout_margin="30dp"/>
+    //insertion des images dans un chain
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
